@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+</head>
+<body>
+ <header>
+     <a href="#" class="logo">Logo</a>
+     <ul>
+         <li><a href="#" class="active">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Work</a></li>
+         <li><a href="#">Contact</a></li>
+     </ul>
+ </header>
+<section>
+    <img src="public/stars.png" id="stars">
+    <img src="public/moon.png" id="moon">
+    <img src="public/mountains_behind.png" id="mountains_behind">
+     <h2 id="text">Moon Light</h2>
+    <a href="#" id="btn">Explore</a>
+    <img src="public/mountains_front.png" id="mountains_front">
+</section>
+<div class="sec" id="sec">
+    <h2>Scroll Effects</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, veniam, veritatis. <br>
+        Consectetur dolorem eaque inventore laudantium nam odit quos repellendus, totam? Adipisci animi consectetur consequatur cumque deserunt ipsa officia quod.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos dolorem iusto maxime necessitatibus obcaecati quaerat totam unde voluptatibus!
+        <br>Accusamus, amet aspernatur atque distinctio dolores exercitationem illum magnam quasi quibusdam!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, veniam, veritatis. <br>
+        Consectetur dolorem eaque inventore laudantium nam odit quos repellendus, totam? Adipisci animi consectetur consequatur cumque deserunt ipsa officia quod.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos dolorem iusto maxime necessitatibus obcaecati quaerat totam unde voluptatibus!
+        <br>Accusamus, amet aspernatur atque distinctio dolores exercitationem illum magnam quasi quibusdam!</p><br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, veniam, veritatis. <br>
+        Consectetur dolorem eaque inventore laudantium nam odit quos repellendus, totam? Adipisci animi consectetur consequatur cumque deserunt ipsa officia quod.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos dolorem iusto maxime necessitatibus obcaecati quaerat totam unde voluptatibus!
+        <br>Accusamus, amet aspernatur atque distinctio dolores exercitationem illum magnam quasi quibusdam!</p>
+</div>
+ <script>
+     let stars = document.getElementById("stars");
+     let moon = document.getElementById("moon");
+     let behind = document.getElementById("mountains_behind");
+     let front = document.getElementById("mountains_front");
+     let text = document.getElementById("text");
+     let btn = document.getElementById("btn");
+     let head = document.querySelector('header');
+
+     window.addEventListener('scroll', function (){
+         let value = window.scrollY;
+         stars.style.left = value * 0.25 + 'px';
+         moon.style.top = value * 1.05 + 'px';
+         behind.style.top = value * 0.5 + 'px';
+         front.style.top = value * 0 + 'px';
+         text.style.marginRight = value * 4 + 'px';
+         text.style.marginTop = value * 1.5 + 'px';
+         btn.style.marginTop = value * 1.5 + 'px';
+         head.style.top = value * 0.5 + 'px';
+     });
+
+ </script>
+</body>
+</html>
